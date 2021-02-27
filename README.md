@@ -25,6 +25,16 @@ with open('upload-file.csv', 'w', newline='') as csvfile:
 	writer.writerow(row.writable) # write row
 ```
 To make it easy, the csv will contain all optional fields, which will just be left blank if not required.
+
+## Installation
+
+```shell
+git clone https://github.com/d-e-h-i-o/shopify_csv.git
+cd shopify_csv/
+python setup.py install
+```
+
+
 ## API
 
 An instance of the ```ShopifyRow``` class exposes all column fields as properties in the snake_case style (e.g. "Option1 Name" as `row.option1_name`). 
