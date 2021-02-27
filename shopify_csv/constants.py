@@ -49,7 +49,7 @@ FIELDS = [
     "Variant Tax Code",
     "Cost per item",
     "Status",
-    "Collection"
+    "Collection",
 ]
 
 HANDLE = re.compile(r"^[\w-]+$")
@@ -103,5 +103,5 @@ PROPERTIES = [
     "variant_tax_code",
     "cost_per_item",
     "status",
-    "collection"
+    "collection",
 ]

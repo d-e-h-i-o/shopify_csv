@@ -177,8 +177,8 @@ class Tags(Validator):
         if not isinstance(value, (str, list)):
             raise ValueError("Tags must be list or string.")
 
-class NoWhitespace(Validator):
 
+class NoWhitespace(Validator):
     def validate(self, value):
         if not isinstance(value, str):
             if value is None:

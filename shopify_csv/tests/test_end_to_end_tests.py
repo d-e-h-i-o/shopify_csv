@@ -3,10 +3,17 @@ import csv
 
 from shopify_csv import ShopifyRow
 
+
 def get_template_rows():
-    with open(os.path.join(os.getcwd(), "shopify_csv", "tests", "fixtures", "product_template.csv"), "r") as file:
+    with open(
+        os.path.join(
+            os.getcwd(), "shopify_csv", "tests", "fixtures", "product_template.csv"
+        ),
+        "r",
+    ) as file:
         reader = csv.reader(file, delimiter=";")
         return [row for row in reader]
+
 
 def get_shopify_rows():
     return_rows = []
@@ -48,7 +55,7 @@ def get_shopify_rows():
 
     row = ShopifyRow()
     row.handle = "example-t-shirt"
-    row.option1_value = 'Small'
+    row.option1_value = "Small"
     row.variant_sku = "example-product-s"
     row.variant_grams = 200
     row.variant_inventory_policy = "deny"
@@ -63,7 +70,7 @@ def get_shopify_rows():
 
     row = ShopifyRow()
     row.handle = "example-t-shirt"
-    row.option1_value = 'Medium'
+    row.option1_value = "Medium"
     row.variant_sku = "example-product-m"
     row.variant_grams = 200
     row.variant_inventory_tracker = "shopify"
@@ -78,7 +85,6 @@ def get_shopify_rows():
     return_rows.append(row.writable)
 
     return return_rows
-
 
 
 def test_should_produce_template_csv():
